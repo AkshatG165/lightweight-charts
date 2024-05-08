@@ -28,7 +28,7 @@ export const ChartComponent = () => {
   useEffect(() => {
     async function getData() {
       const data = [];
-      const q = query(collection(db, 'ohlc2'));
+      const q = query(collection(db, 'ohlc'));
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => data.push(offsetDate(doc.data())));
 
